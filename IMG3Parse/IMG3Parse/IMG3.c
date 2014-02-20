@@ -11,12 +11,11 @@
 
 #include "IMG3.h"
 
-
-
-
 struct IMG3_File * ParseIMG3FileAtPath(char *path) {
-	struct IMG3_File *parsedFile = (struct IMG3_File *)calloc(0x1, sizeof(struct IMG3_File));
+	struct IMG3_File *parsedFile = (struct IMG3_File *)calloc(0x1, S(struct IMG3_File));
 	if (path) {
+		parsedFile->fileContents = CreateBufferFromFilePath(path);
+		parsedFile->header = PtrCast(parsedFile->fileContents->data,struct IMG3_Header*);
 		
 	}
 	return parsedFile;

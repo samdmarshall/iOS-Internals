@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:lockbot/lockbot.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:IMG3Parse/IMG3Parse.xcodeproj">
    </FileRef>
 </Workspace>

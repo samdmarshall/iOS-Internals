@@ -16,6 +16,7 @@
 		22C89296189C8C15008B1D2D /* Matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C8928C189C8C15008B1D2D /* Matrix.c */; };
 		22C89297189C8C15008B1D2D /* Vector.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C8928E189C8C15008B1D2D /* Vector.c */; };
 		22C89299189C8C28008B1D2D /* CFDataAddition.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C89298189C8C28008B1D2D /* CFDataAddition.c */; };
+		22C8929D189C916C008B1D2D /* Buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C8929C189C916C008B1D2D /* Buffer.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +56,8 @@
 		22C89293189C8C15008B1D2D /* Range.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Range.h; sourceTree = "<group>"; };
 		22C89298189C8C28008B1D2D /* CFDataAddition.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CFDataAddition.c; sourceTree = "<group>"; };
 		22C8929A189C8C36008B1D2D /* CFDataAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFDataAddition.h; sourceTree = "<group>"; };
+		22C8929B189C911B008B1D2D /* Buffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Buffer.h; sourceTree = "<group>"; };
+		22C8929C189C916C008B1D2D /* Buffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Buffer.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				22C89291189C8C15008B1D2D /* Number.h */,
 				22C89292189C8C15008B1D2D /* Pointer.h */,
 				22C89293189C8C15008B1D2D /* Range.h */,
+				22C8929B189C911B008B1D2D /* Buffer.h */,
+				22C8929C189C916C008B1D2D /* Buffer.c */,
 			);
 			name = Core;
 			path = "../Core-Lib/Core";
@@ -201,6 +206,7 @@
 				22C89297189C8C15008B1D2D /* Vector.c in Sources */,
 				22C89295189C8C15008B1D2D /* CFTypeAddition.c in Sources */,
 				22C89299189C8C28008B1D2D /* CFDataAddition.c in Sources */,
+				22C8929D189C916C008B1D2D /* Buffer.c in Sources */,
 				22C89296189C8C15008B1D2D /* Matrix.c in Sources */,
 				22C89294189C8C15008B1D2D /* CFDictionaryAddition.c in Sources */,
 				22C89277189C8680008B1D2D /* main.c in Sources */,

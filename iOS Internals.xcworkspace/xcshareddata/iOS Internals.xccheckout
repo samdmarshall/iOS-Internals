@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>01C6351D-3AAA-4A24-9599-488278AE8A97</string>
+	<key>IDESourceControlProjectName</key>
+	<string>iOS Internals</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>709024D8-3D62-4A23-B220-20CD79731F24</key>
+		<string>ssh://github.com/samdmarshall/iOS-Internals.git</string>
+		<key>F2EF78E4-66BE-4A9A-A52D-A39B33F61BB9</key>
+		<string>ssh://github.com/samdmarshall/Core-Lib.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOS Internals.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>709024D8-3D62-4A23-B220-20CD79731F24</key>
+		<string>..</string>
+		<key>F2EF78E4-66BE-4A9A-A52D-A39B33F61BB9</key>
+		<string>../Core-Lib</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/samdmarshall/iOS-Internals.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>709024D8-3D62-4A23-B220-20CD79731F24</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F2EF78E4-66BE-4A9A-A52D-A39B33F61BB9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Core-Lib</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>709024D8-3D62-4A23-B220-20CD79731F24</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOS Internals</string>
+		</dict>
+	</array>
+</dict>
+</plist>

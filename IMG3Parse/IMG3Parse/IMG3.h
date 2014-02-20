@@ -9,6 +9,7 @@
 #ifndef IMG3Parse_IMG3_h
 #define IMG3Parse_IMG3_h
 
+#include <CoreFoundation/CoreFoundation.h>
 #include "Core.h"
 
 /*
@@ -53,15 +54,14 @@ struct IMG3_Header {
 };
 
 struct IMG3_Tag {
-	enum IMG3_Tag_Magic type;
+	char type[4];
 	uint32_t totalLength;
 	uint32_t dataLength;
-	char *dataBuffer;
-	char *padBuffer;
 };
 
 struct IMG3_File {
-	struct IMG3_Header header;
+	BufferRef fileContents;
+	struct IMG3_Header *header;
 	struct IMG3_Tag *tags;
 	uint32_t tagCount;
 };
