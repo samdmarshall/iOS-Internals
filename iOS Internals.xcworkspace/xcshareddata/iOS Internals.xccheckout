@@ -12,6 +12,8 @@
 	<dict>
 		<key>709024D8-3D62-4A23-B220-20CD79731F24</key>
 		<string>ssh://github.com/samdmarshall/iOS-Internals.git</string>
+		<key>E03DDEF6-B97D-41E3-B129-83B8A6249CEB</key>
+		<string>ssh://github.com/samdmarshall/SDMMobileDevice.git</string>
 		<key>F2EF78E4-66BE-4A9A-A52D-A39B33F61BB9</key>
 		<string>ssh://github.com/samdmarshall/Core-Lib.git</string>
 	</dict>
@@ -21,6 +23,8 @@
 	<dict>
 		<key>709024D8-3D62-4A23-B220-20CD79731F24</key>
 		<string>..</string>
+		<key>E03DDEF6-B97D-41E3-B129-83B8A6249CEB</key>
+		<string>../../SDMMobileDevice</string>
 		<key>F2EF78E4-66BE-4A9A-A52D-A39B33F61BB9</key>
 		<string>../Core-Lib</string>
 	</dict>
@@ -47,6 +51,14 @@
 			<string>709024D8-3D62-4A23-B220-20CD79731F24</string>
 			<key>IDESourceControlWCCName</key>
 			<string>iOS Internals</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E03DDEF6-B97D-41E3-B129-83B8A6249CEB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SDM_MD_Demo</string>
 		</dict>
 	</array>
 </dict>

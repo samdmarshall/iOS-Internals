@@ -26,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2253D3DD18B6D2E9001DFBAB /* lockdown_keys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lockdown_keys.h; sourceTree = "<group>"; };
 		2297B37818B58F0400415856 /* lockbot */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lockbot; sourceTree = BUILT_PRODUCTS_DIR; };
 		2297B37E18B58F0500415856 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2297B38018B58F0500415856 /* lockbot.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = lockbot.1; sourceTree = "<group>"; };
@@ -72,6 +73,7 @@
 		2297B37D18B58F0400415856 /* lockbot */ = {
 			isa = PBXGroup;
 			children = (
+				2253D3DD18B6D2E9001DFBAB /* lockdown_keys.h */,
 				2297B37E18B58F0500415856 /* main.m */,
 				2297B38018B58F0500415856 /* lockbot.1 */,
 			);

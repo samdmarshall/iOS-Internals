@@ -11,6 +11,8 @@
 #include <syslog.h>
 #include <launch.h>
 #include <signal.h>
+#include <sys/socket.h>
+#include "lockdown_keys.h"
 
 Boolean IsCFNumber(CFTypeRef value) {
 	return (CFGetTypeID(value) == CFNumberGetTypeID());
@@ -57,6 +59,55 @@ void WriteToSyslog(char *function, CFStringRef format, ...) {
 		pthread_t current_thread = pthread_self();
 		syslog(LOG_SYSLOG, "%08x %s: %s", (unsigned int)current_thread, function_copy, message);
 	}	
+}
+
+Boolean CanSetPreferences(CFStringRef domain, CFStringRef key, CFTypeRef value) {
+	Boolean can_set_pref = false, found_domain = false, found_key = false;
+	uint32_t domain_index, key_index;
+	for (domain_index = 0; domain_index < SDM_MD_Domain_Count; domain_index++) {
+		CFStringRef known_domain = CFStringCreateWithCString(kCFAllocatorDefault, SDMMDKnownDomain[domain_index].domain, kCFStringEncodingUTF8);
+		if (CFStringCompare(known_domain, domain, 0) == 0) {
+			found_domain = true;
+			break;
+		}
+	}
+	
+	if (found_domain) {
+		for (key_index = 0; key_index < SDMMDKnownDomain[domain_index].keyCount; key_index++) {
+			CFStringRef known_key = CFStringCreateWithCString(kCFAllocatorDefault, SDMMDKnownDomain[domain_index].keys[key_index], kCFStringEncodingUTF8);
+			if (CFStringCompare(known_key, key, 0) == 0) {
+				found_key = true;
+				break;
+			}
+		}
+	}
+	
+	if (found_domain && found_key) {
+		if (key != NULL && domain != NULL) {
+			CFPreferencesSetValue(key, value, domain, kCFPreferencesAnyUser, kCFPreferencesAnyHost);
+			can_set_pref = true;
+		}
+	}
+	
+	return can_set_pref;
+}
+
+int SetFDSocketNoSigPipe(int socket) {
+	int buf_size = 0x4;
+    if (setsockopt(socket, SOL_SOCKET, SO_NOSIGPIPE, &buf_size, sizeof(buf_size))) {
+		WriteToSyslog("SetFDSocketNoSigPipe", CFSTR("setsockopt(SO_NOSIGPIPE) failed: %s"), strerror(errno));
+    }
+    return socket;
+	
+}
+
+int SetFDSocketNoWake(int socket) {
+	int buf_size = 0x4;
+    if (setsockopt(socket, SOL_SOCKET, 0x10000, &buf_size, sizeof(buf_size))) {
+		WriteToSyslog("SetFDSocketNoWake", CFSTR("setsockopt(SO_NOWAKEFROMSLEEP) failed: %s"), strerror(errno));
+    }
+    return socket;
+
 }
 
 int InitializeFD(launch_data_t data) {
