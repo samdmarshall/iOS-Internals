@@ -15,6 +15,8 @@
 #include "launch_priv.h"
 #include "lockdown_keys.h"
 
+extern CFBooleanRef DiagnosticLogSubmissionEnabled() __attribute__((weak));
+
 Boolean IsCFNumber(CFTypeRef value) {
 	return (CFGetTypeID(value) == CFNumberGetTypeID());
 }
@@ -60,6 +62,45 @@ void WriteToSyslog(char *function, CFStringRef format, ...) {
 		pthread_t current_thread = pthread_self();
 		syslog(LOG_SYSLOG, "%08x %s: %s", (unsigned int)current_thread, function_copy, message);
 	}	
+}
+
+CFTypeRef GetPreferences(CFStringRef domain, CFStringRef key) {
+	CFTypeRef value = NULL;
+	Boolean found_domain = false, found_key = false;
+	uint32_t domain_index, key_index;
+	for (domain_index = 0; domain_index < SDM_MD_Domain_Count; domain_index++) {
+		CFStringRef known_domain = CFStringCreateWithCString(kCFAllocatorDefault, SDMMDKnownDomain[domain_index].domain, kCFStringEncodingUTF8);
+		if (CFStringCompare(known_domain, domain, 0) == 0) {
+			found_domain = true;
+			break;
+		}
+	}
+	
+	if (found_domain) {
+		for (key_index = 0; key_index < SDMMDKnownDomain[domain_index].keyCount; key_index++) {
+			CFStringRef known_key = CFStringCreateWithCString(kCFAllocatorDefault, SDMMDKnownDomain[domain_index].keys[key_index], kCFStringEncodingUTF8);
+			if (CFStringCompare(known_key, key, 0) == 0) {
+				found_key = true;
+				break;
+			}
+		}
+	}
+	
+	if (found_domain && found_key) {
+		if (key != NULL && domain != NULL) {
+			CFPreferencesSynchronize(kCFPreferencesAnyApplication, kCFPreferencesAnyUser, kCFPreferencesAnyHost);
+			
+			value = CFPreferencesCopyValue(key, domain, kCFPreferencesAnyUser, kCFPreferencesAnyHost);
+			
+		}
+	} else {
+		CFBooleanRef result = DiagnosticLogSubmissionEnabled();
+		if (result == kCFBooleanTrue) {
+			value = CFPreferencesGetAppBooleanValue(CFSTR("LockdownLogCrashCatcher"), CFSTR("com.apple.mobile.demo"), NULL);
+		}
+	}
+	
+	return value;
 }
 
 Boolean CanSetPreferences(CFStringRef domain, CFStringRef key, CFTypeRef value) {
