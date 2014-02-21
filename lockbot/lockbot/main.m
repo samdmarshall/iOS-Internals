@@ -12,6 +12,7 @@
 #include <launch.h>
 #include <signal.h>
 #include <sys/socket.h>
+#include "launch_priv.h"
 #include "lockdown_keys.h"
 
 Boolean IsCFNumber(CFTypeRef value) {
@@ -90,6 +91,23 @@ Boolean CanSetPreferences(CFStringRef domain, CFStringRef key, CFTypeRef value) 
 	}
 	
 	return can_set_pref;
+}
+
+int launchedbylaunchd() {
+	launch_data_t checkin_response = NULL;
+	int launchdlaunched = 0;
+	if ((checkin_response = launch_socket_service_check_in()) != NULL) {
+		if (LAUNCH_DATA_ERRNO != launch_data_get_type(checkin_response)) {
+			launchdlaunched = 1;
+		}
+	}
+	if (launchdlaunched) {
+		/* clean up before we leave */
+		if (checkin_response) {
+			launch_data_free(checkin_response);
+		}
+	}
+	return launchdlaunched;
 }
 
 int SetFDSocketNoSigPipe(int socket) {
