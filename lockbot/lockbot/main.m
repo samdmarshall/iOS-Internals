@@ -64,9 +64,8 @@ void WriteToSyslog(char *function, CFStringRef format, ...) {
 	}	
 }
 
-CFTypeRef GetPreferences(CFStringRef domain, CFStringRef key) {
-	CFTypeRef value = NULL;
-	Boolean found_domain = false, found_key = false;
+Boolean GetPreferences(CFStringRef domain, CFStringRef key, CFTypeRef *value) {
+	Boolean found_value = false, found_domain = false, found_key = false;
 	uint32_t domain_index, key_index;
 	for (domain_index = 0; domain_index < SDM_MD_Domain_Count; domain_index++) {
 		CFStringRef known_domain = CFStringCreateWithCString(kCFAllocatorDefault, SDMMDKnownDomain[domain_index].domain, kCFStringEncodingUTF8);
@@ -90,17 +89,19 @@ CFTypeRef GetPreferences(CFStringRef domain, CFStringRef key) {
 		if (key != NULL && domain != NULL) {
 			CFPreferencesSynchronize(kCFPreferencesAnyApplication, kCFPreferencesAnyUser, kCFPreferencesAnyHost);
 			
-			value = CFPreferencesCopyValue(key, domain, kCFPreferencesAnyUser, kCFPreferencesAnyHost);
-			
+			*value = CFPreferencesCopyValue(key, domain, kCFPreferencesAnyUser, kCFPreferencesAnyHost);
+			if (*value != NULL) {
+				found_value = true;
+			}
 		}
 	} else {
 		CFBooleanRef result = DiagnosticLogSubmissionEnabled();
 		if (result == kCFBooleanTrue) {
-			value = CFPreferencesGetAppBooleanValue(CFSTR("LockdownLogCrashCatcher"), CFSTR("com.apple.mobile.demo"), NULL);
+			found_value = CFPreferencesGetAppBooleanValue(CFSTR("LockdownLogCrashCatcher"), CFSTR("com.apple.mobile.demo"), NULL);
 		}
 	}
 	
-	return value;
+	return found_value;
 }
 
 Boolean CanSetPreferences(CFStringRef domain, CFStringRef key, CFTypeRef value) {
