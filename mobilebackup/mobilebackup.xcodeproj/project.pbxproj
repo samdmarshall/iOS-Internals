@@ -36,6 +36,8 @@
 		22A58E92191195F700303D31 /* Endian.h in Headers */ = {isa = PBXBuildFile; fileRef = 22A58E86191195F700303D31 /* Endian.h */; };
 		22A58E93191195F700303D31 /* File.c in Sources */ = {isa = PBXBuildFile; fileRef = 22A58E87191195F700303D31 /* File.c */; };
 		22A58E94191195F700303D31 /* File.h in Headers */ = {isa = PBXBuildFile; fileRef = 22A58E88191195F700303D31 /* File.h */; };
+		22A58E96191196FE00303D31 /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A58E95191196FE00303D31 /* libssl.dylib */; };
+		22A58E981911970200303D31 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A58E971911970200303D31 /* libcrypto.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +71,8 @@
 		22A58E86191195F700303D31 /* Endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Endian.h; sourceTree = "<group>"; };
 		22A58E87191195F700303D31 /* File.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = File.c; sourceTree = "<group>"; };
 		22A58E88191195F700303D31 /* File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = File.h; sourceTree = "<group>"; };
+		22A58E95191196FE00303D31 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = usr/lib/libssl.dylib; sourceTree = SDKROOT; };
+		22A58E971911970200303D31 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = usr/lib/libcrypto.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A58E981911970200303D31 /* libcrypto.dylib in Frameworks */,
+				22A58E96191196FE00303D31 /* libssl.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +91,8 @@
 		22A58E201911953D00303D31 = {
 			isa = PBXGroup;
 			children = (
+				22A58E971911970200303D31 /* libcrypto.dylib */,
+				22A58E95191196FE00303D31 /* libssl.dylib */,
 				22A58E56191195BA00303D31 /* Core */,
 				22A58E301911954200303D31 /* src */,
 				22A58E2A1911953D00303D31 /* Products */,

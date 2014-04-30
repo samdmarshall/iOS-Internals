@@ -12,6 +12,7 @@
 #include "mbdb.h"
 #include "Core.h"
 #include <time.h>
+#include <openssl/sha.h>
 
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
