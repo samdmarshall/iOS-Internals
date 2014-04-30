@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22A58E77191195E000303D31 /* CFDataAddition.c in Sources */ = {isa = PBXBuildFile; fileRef = 22A58E6C191195E000303D31 /* CFDataAddition.c */; };
+		22A58E78191195E000303D31 /* CFDictionaryAddition.c in Sources */ = {isa = PBXBuildFile; fileRef = 22A58E6E191195E000303D31 /* CFDictionaryAddition.c */; };
+		22A58E79191195E000303D31 /* CFStringAddition.c in Sources */ = {isa = PBXBuildFile; fileRef = 22A58E70191195E000303D31 /* CFStringAddition.c */; };
+		22A58E7A191195E000303D31 /* CFTypeAddition.c in Sources */ = {isa = PBXBuildFile; fileRef = 22A58E72191195E000303D31 /* CFTypeAddition.c */; };
+		22A58E7B191195E000303D31 /* File.c in Sources */ = {isa = PBXBuildFile; fileRef = 22A58E75191195E000303D31 /* File.c */; };
 		22C89274189C8680008B1D2D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C89273189C8680008B1D2D /* CoreFoundation.framework */; };
 		22C89277189C8680008B1D2D /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C89276189C8680008B1D2D /* main.c */; };
 		22C89279189C8680008B1D2D /* IMG3Parse.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 22C89278189C8680008B1D2D /* IMG3Parse.1 */; };
 		22C89281189C86A4008B1D2D /* IMG3.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C89280189C86A4008B1D2D /* IMG3.c */; };
-		22C89294189C8C15008B1D2D /* CFDictionaryAddition.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C89286189C8C15008B1D2D /* CFDictionaryAddition.c */; };
-		22C89295189C8C15008B1D2D /* CFTypeAddition.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C89288189C8C15008B1D2D /* CFTypeAddition.c */; };
 		22C89296189C8C15008B1D2D /* Matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C8928C189C8C15008B1D2D /* Matrix.c */; };
 		22C89297189C8C15008B1D2D /* Vector.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C8928E189C8C15008B1D2D /* Vector.c */; };
-		22C89299189C8C28008B1D2D /* CFDataAddition.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C89298189C8C28008B1D2D /* CFDataAddition.c */; };
 		22C8929D189C916C008B1D2D /* Buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 22C8929C189C916C008B1D2D /* Buffer.c */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		22A58E6A191195E000303D31 /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Array.h; sourceTree = "<group>"; };
+		22A58E6C191195E000303D31 /* CFDataAddition.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CFDataAddition.c; sourceTree = "<group>"; };
+		22A58E6D191195E000303D31 /* CFDataAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFDataAddition.h; sourceTree = "<group>"; };
+		22A58E6E191195E000303D31 /* CFDictionaryAddition.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CFDictionaryAddition.c; sourceTree = "<group>"; };
+		22A58E6F191195E000303D31 /* CFDictionaryAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFDictionaryAddition.h; sourceTree = "<group>"; };
+		22A58E70191195E000303D31 /* CFStringAddition.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CFStringAddition.c; sourceTree = "<group>"; };
+		22A58E71191195E000303D31 /* CFStringAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFStringAddition.h; sourceTree = "<group>"; };
+		22A58E72191195E000303D31 /* CFTypeAddition.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CFTypeAddition.c; sourceTree = "<group>"; };
+		22A58E73191195E000303D31 /* CFTypeAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFTypeAddition.h; sourceTree = "<group>"; };
+		22A58E74191195E000303D31 /* Endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Endian.h; sourceTree = "<group>"; };
+		22A58E75191195E000303D31 /* File.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = File.c; sourceTree = "<group>"; };
+		22A58E76191195E000303D31 /* File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = File.h; sourceTree = "<group>"; };
 		22C89270189C8680008B1D2D /* IMG3Parse */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = IMG3Parse; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C89273189C8680008B1D2D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		22C89276189C8680008B1D2D /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
@@ -41,10 +55,6 @@
 		22C89280189C86A4008B1D2D /* IMG3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = IMG3.c; sourceTree = "<group>"; };
 		22C89283189C8C15008B1D2D /* Attributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attributes.h; sourceTree = "<group>"; };
 		22C89284189C8C15008B1D2D /* Core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
-		22C89286189C8C15008B1D2D /* CFDictionaryAddition.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CFDictionaryAddition.c; sourceTree = "<group>"; };
-		22C89287189C8C15008B1D2D /* CFDictionaryAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFDictionaryAddition.h; sourceTree = "<group>"; };
-		22C89288189C8C15008B1D2D /* CFTypeAddition.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CFTypeAddition.c; sourceTree = "<group>"; };
-		22C89289189C8C15008B1D2D /* CFTypeAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFTypeAddition.h; sourceTree = "<group>"; };
 		22C8928B189C8C15008B1D2D /* GeometryMaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeometryMaths.h; sourceTree = "<group>"; };
 		22C8928C189C8C15008B1D2D /* Matrix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Matrix.c; sourceTree = "<group>"; };
 		22C8928D189C8C15008B1D2D /* Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
@@ -54,8 +64,6 @@
 		22C89291189C8C15008B1D2D /* Number.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Number.h; sourceTree = "<group>"; };
 		22C89292189C8C15008B1D2D /* Pointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pointer.h; sourceTree = "<group>"; };
 		22C89293189C8C15008B1D2D /* Range.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Range.h; sourceTree = "<group>"; };
-		22C89298189C8C28008B1D2D /* CFDataAddition.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CFDataAddition.c; sourceTree = "<group>"; };
-		22C8929A189C8C36008B1D2D /* CFDataAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFDataAddition.h; sourceTree = "<group>"; };
 		22C8929B189C911B008B1D2D /* Buffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Buffer.h; sourceTree = "<group>"; };
 		22C8929C189C916C008B1D2D /* Buffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Buffer.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +80,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22A58E6B191195E000303D31 /* CoreFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				22A58E6C191195E000303D31 /* CFDataAddition.c */,
+				22A58E6D191195E000303D31 /* CFDataAddition.h */,
+				22A58E6E191195E000303D31 /* CFDictionaryAddition.c */,
+				22A58E6F191195E000303D31 /* CFDictionaryAddition.h */,
+				22A58E70191195E000303D31 /* CFStringAddition.c */,
+				22A58E71191195E000303D31 /* CFStringAddition.h */,
+				22A58E72191195E000303D31 /* CFTypeAddition.c */,
+				22A58E73191195E000303D31 /* CFTypeAddition.h */,
+			);
+			path = CoreFoundation;
+			sourceTree = "<group>";
+		};
 		22C89267189C8680008B1D2D = {
 			isa = PBXGroup;
 			children = (
@@ -112,9 +135,13 @@
 		22C89282189C8C15008B1D2D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				22A58E6A191195E000303D31 /* Array.h */,
+				22A58E74191195E000303D31 /* Endian.h */,
+				22A58E75191195E000303D31 /* File.c */,
+				22A58E76191195E000303D31 /* File.h */,
 				22C89283189C8C15008B1D2D /* Attributes.h */,
 				22C89284189C8C15008B1D2D /* Core.h */,
-				22C89285189C8C15008B1D2D /* CoreFoundation */,
+				22A58E6B191195E000303D31 /* CoreFoundation */,
 				22C8928A189C8C15008B1D2D /* Geometry */,
 				22C89290189C8C15008B1D2D /* Logging.h */,
 				22C89291189C8C15008B1D2D /* Number.h */,
@@ -125,19 +152,6 @@
 			);
 			name = Core;
 			path = "../Core-Lib/Core";
-			sourceTree = "<group>";
-		};
-		22C89285189C8C15008B1D2D /* CoreFoundation */ = {
-			isa = PBXGroup;
-			children = (
-				22C89286189C8C15008B1D2D /* CFDictionaryAddition.c */,
-				22C89287189C8C15008B1D2D /* CFDictionaryAddition.h */,
-				22C89288189C8C15008B1D2D /* CFTypeAddition.c */,
-				22C89289189C8C15008B1D2D /* CFTypeAddition.h */,
-				22C89298189C8C28008B1D2D /* CFDataAddition.c */,
-				22C8929A189C8C36008B1D2D /* CFDataAddition.h */,
-			);
-			path = CoreFoundation;
 			sourceTree = "<group>";
 		};
 		22C8928A189C8C15008B1D2D /* Geometry */ = {
@@ -203,13 +217,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A58E7B191195E000303D31 /* File.c in Sources */,
 				22C89297189C8C15008B1D2D /* Vector.c in Sources */,
-				22C89295189C8C15008B1D2D /* CFTypeAddition.c in Sources */,
-				22C89299189C8C28008B1D2D /* CFDataAddition.c in Sources */,
+				22A58E78191195E000303D31 /* CFDictionaryAddition.c in Sources */,
 				22C8929D189C916C008B1D2D /* Buffer.c in Sources */,
 				22C89296189C8C15008B1D2D /* Matrix.c in Sources */,
-				22C89294189C8C15008B1D2D /* CFDictionaryAddition.c in Sources */,
+				22A58E77191195E000303D31 /* CFDataAddition.c in Sources */,
+				22A58E7A191195E000303D31 /* CFTypeAddition.c in Sources */,
 				22C89277189C8680008B1D2D /* main.c in Sources */,
+				22A58E79191195E000303D31 /* CFStringAddition.c in Sources */,
 				22C89281189C86A4008B1D2D /* IMG3.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +336,7 @@
 				22C8927E189C8680008B1D2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
