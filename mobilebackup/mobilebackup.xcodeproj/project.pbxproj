@@ -38,7 +38,33 @@
 		22A58E94191195F700303D31 /* File.h in Headers */ = {isa = PBXBuildFile; fileRef = 22A58E88191195F700303D31 /* File.h */; };
 		22A58E96191196FE00303D31 /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A58E95191196FE00303D31 /* libssl.dylib */; };
 		22A58E981911970200303D31 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A58E971911970200303D31 /* libcrypto.dylib */; };
+		22E702C1194A42DA000B8F3A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 22E702C0194A42DA000B8F3A /* main.c */; };
+		22E702C3194A42DA000B8F3A /* mb2parse.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 22E702C2194A42DA000B8F3A /* mb2parse.1 */; };
+		22E702C9194A42E7000B8F3A /* libmobilebackup.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A58E291911953D00303D31 /* libmobilebackup.dylib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22E702C7194A42E1000B8F3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22A58E211911953D00303D31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22A58E281911953D00303D31;
+			remoteInfo = mobilebackup;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		22E702BC194A42D9000B8F3A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				22E702C3194A42DA000B8F3A /* mb2parse.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		22A58E291911953D00303D31 /* libmobilebackup.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libmobilebackup.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +99,9 @@
 		22A58E88191195F700303D31 /* File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = File.h; sourceTree = "<group>"; };
 		22A58E95191196FE00303D31 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = usr/lib/libssl.dylib; sourceTree = SDKROOT; };
 		22A58E971911970200303D31 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = usr/lib/libcrypto.dylib; sourceTree = SDKROOT; };
+		22E702BE194A42D9000B8F3A /* mb2parse */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mb2parse; sourceTree = BUILT_PRODUCTS_DIR; };
+		22E702C0194A42DA000B8F3A /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		22E702C2194A42DA000B8F3A /* mb2parse.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = mb2parse.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +111,14 @@
 			files = (
 				22A58E981911970200303D31 /* libcrypto.dylib in Frameworks */,
 				22A58E96191196FE00303D31 /* libssl.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22E702BB194A42D9000B8F3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22E702C9194A42E7000B8F3A /* libmobilebackup.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +132,7 @@
 				22A58E95191196FE00303D31 /* libssl.dylib */,
 				22A58E56191195BA00303D31 /* Core */,
 				22A58E301911954200303D31 /* src */,
+				22E702BF194A42DA000B8F3A /* mb2parse */,
 				22A58E2A1911953D00303D31 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				22A58E291911953D00303D31 /* libmobilebackup.dylib */,
+				22E702BE194A42D9000B8F3A /* mb2parse */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -149,7 +188,7 @@
 				22A58E55191195BA00303D31 /* Buffer.c */,
 			);
 			name = Core;
-			path = "/Users/sam/Projects/iOS Internals/IMG3Parse/../Core-Lib/Core";
+			path = "/Users/sam/Projects/iOS/iOS Internals/Core-Lib/Core";
 			sourceTree = "<absolute>";
 		};
 		22A58E7D191195F700303D31 /* CoreFoundation */ = {
@@ -165,6 +204,15 @@
 				22A58E85191195F700303D31 /* CFTypeAddition.h */,
 			);
 			path = CoreFoundation;
+			sourceTree = "<group>";
+		};
+		22E702BF194A42DA000B8F3A /* mb2parse */ = {
+			isa = PBXGroup;
+			children = (
+				22E702C0194A42DA000B8F3A /* main.c */,
+				22E702C2194A42DA000B8F3A /* mb2parse.1 */,
+			);
+			path = mb2parse;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +264,24 @@
 			productReference = 22A58E291911953D00303D31 /* libmobilebackup.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
+		22E702BD194A42D9000B8F3A /* mb2parse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22E702C6194A42DA000B8F3A /* Build configuration list for PBXNativeTarget "mb2parse" */;
+			buildPhases = (
+				22E702BA194A42D9000B8F3A /* Sources */,
+				22E702BB194A42D9000B8F3A /* Frameworks */,
+				22E702BC194A42D9000B8F3A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22E702C8194A42E1000B8F3A /* PBXTargetDependency */,
+			);
+			name = mb2parse;
+			productName = mb2parse;
+			productReference = 22E702BE194A42D9000B8F3A /* mb2parse */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -238,6 +304,7 @@
 			projectRoot = "";
 			targets = (
 				22A58E281911953D00303D31 /* mobilebackup */,
+				22E702BD194A42D9000B8F3A /* mb2parse */,
 			);
 		};
 /* End PBXProject section */
@@ -260,7 +327,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		22E702BA194A42D9000B8F3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22E702C1194A42DA000B8F3A /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22E702C8194A42E1000B8F3A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22A58E281911953D00303D31 /* mobilebackup */;
+			targetProxy = 22E702C7194A42E1000B8F3A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		22A58E2B1911953D00303D31 /* Debug */ = {
@@ -349,6 +432,24 @@
 			};
 			name = Release;
 		};
+		22E702C4194A42DA000B8F3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		22E702C5194A42DA000B8F3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -366,6 +467,15 @@
 			buildConfigurations = (
 				22A58E2E1911953D00303D31 /* Debug */,
 				22A58E2F1911953D00303D31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22E702C6194A42DA000B8F3A /* Build configuration list for PBXNativeTarget "mb2parse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22E702C4194A42DA000B8F3A /* Debug */,
+				22E702C5194A42DA000B8F3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

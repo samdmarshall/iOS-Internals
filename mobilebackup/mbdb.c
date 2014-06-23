@@ -32,17 +32,19 @@ unsigned char * DataToSHA1(CFDataRef data) {
 
 struct mbdb_file_name * FindFileForFromManifestRecord(struct mbdb_record * record) {
 	struct mbdb_file_name * file = calloc(1, sizeof(struct mbdb_file_name));
-	if (record->domain.name.length && record->path.name.length && record->data_hash.name.length == HASH_LENGTH) {
+	//if (record->domain.name.length && record->path.name.length && record->data_hash.name.length == HASH_LENGTH) {
 		CFStringRef file_name_format = CFStringCreateWithFormat(kCFAllocatorDefault, NULL, CFSTR("%s-%s"),record->domain.name.string, record->path.name.string);
 		CFDataRef file_name_hash_data = CFStringCreateExternalRepresentation(NULL, file_name_format, kCFStringEncodingUTF8, 0);
 		unsigned char * file_name_hash = DataToSHA1(file_name_hash_data);
-		memcpy(file->name, file_name_hash, sizeof(char[HASH_LENGTH]));
-		memcpy(file->hash, record->data_hash.name.string, sizeof(char[HASH_LENGTH]));
+		memcpy(&file->name, file_name_hash, sizeof(char[HASH_LENGTH]));
+	if (record->data_hash.name.length == HASH_LENGTH) {
+		memcpy(&file->hash, record->data_hash.name.string, sizeof(char[HASH_LENGTH]));
+	}
 		CFSafeRelease(file_name_format);
 		CFSafeRelease(file_name_hash_data);
 		free(file_name_hash);
 		file->has_file = true;
-	}
+	//}
 	return file;
 }
 
